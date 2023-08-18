@@ -15,8 +15,16 @@
 <body>
 <h1>Réservations</h1>
 
-<a href="${pageContext.request.contextPath}/add">Réserver un créneau</a>
+<c:if test="${not empty sessionScope.userSession}">
+<p>Bienvenue à toi : ${sessionScope.userSession}</p>
+</c:if>
 
+<a href="${pageContext.request.contextPath}/add">Réserver un créneau</a>
+<br>
+<br>
+<a href="${pageContext.request.contextPath}/sign-out">Inscription</a>
+<br>
+<br>
 <table border="1">
   <thead>
   <tr>
